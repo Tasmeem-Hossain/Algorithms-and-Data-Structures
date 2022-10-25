@@ -1,19 +1,20 @@
+#---------------------Create a Node-------------------------------------
 class Node:
     def __init__(self,vals):
         self.pre = None
         self.next =None
         self.val = vals
-
+#---------------------Create a Link list---------------------------------
 class DoubleLinklist:
 
     def __init__(self):
         self.head = None
         self.tail = None
         self.size =+ 1
-
+#---------------------Insert Value in the node----------------------------
     def add(self,val):
         node = Node(val)
-        if self.tail is None:
+        if self.tail is None:      
             self.head = node
             self.tail = node
             self.size =+ 1
@@ -22,6 +23,7 @@ class DoubleLinklist:
             node.pre = self.tail
             self.tail = node
             self.size += 1
+#---------------------------Remove value from list----------------------------            
     def __remove_node(self,node):
         if node.pre is None:
             self.head = node.next
